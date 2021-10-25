@@ -1,4 +1,4 @@
-import Habbits from './Habbit'
+import Habbit from './Habbit'
 
 
 function BadHabbits () {
