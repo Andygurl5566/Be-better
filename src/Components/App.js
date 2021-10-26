@@ -4,7 +4,10 @@ import {Link} from "react-router-dom";
 import AboutPage from "./AboutPage";
 import NotesPage from "./NotesPage";
 import Logo from './Logo';
+import MainPage from "./MainPage"
+
 function App() {
+
   return (
    
     <>
