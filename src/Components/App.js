@@ -3,7 +3,7 @@ import {Switch, Route} from "react-router-dom"
 import HomePage from './HomePage';
 import {Link} from "react-router-dom"
 import MainPage from "./MainPage"
-import SecondPage from "./SecondPage";
+import NotesPage from ". NotesPage";
 import Logo from './Logo';
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
         <Route path = "/main-page">
           <MainPage />
         </Route>
-        <Route path = "/second-page">
-          <SecondPage />
+        <Route path = " notes-page">
+           <NotesPage/>
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>
