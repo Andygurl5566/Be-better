@@ -1,13 +1,20 @@
-
+//Hooks
 import {Switch, Route, Link} from "react-router-dom";
+import { useState, useEffect } from "react";
+//Components
 import AboutPage from "./AboutPage";
 import NotesPage from "./NotesPage";
 import Logo from './Logo';
-import MainPage from "./MainPage"
+import MainPage from "./MainPage";
 
 function App() {
-
-
+  const [habits, setHabits] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:4000/habits")
+    .then(r => r.json())
+    .then(setHabits)
+   }, [])
+   console.log(habits)
   return (
    
     <>
