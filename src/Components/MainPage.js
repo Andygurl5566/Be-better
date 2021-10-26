@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 import styled from "styled-components"
 
 
-function MainPage () {
+function MainPage ({habits}) {
 
     return (
         <div>

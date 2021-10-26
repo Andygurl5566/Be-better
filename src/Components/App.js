@@ -1,11 +1,20 @@
-
-import {Switch, Route} from "react-router-dom"
-import AboutPage from './AboutPage';
-import {Link} from "react-router-dom"
-import MainPage from "./MainPage"
+//Hooks
+import {Switch, Route, Link} from "react-router-dom";
+import { useState, useEffect } from "react";
+//Components
+import AboutPage from "./AboutPage";
 import NotesPage from "./NotesPage";
 import Logo from './Logo';
+import MainPage from "./MainPage";
+
 function App() {
+  const [habits, setHabits] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:4000/habits")
+    .then(r => r.json())
+    .then(setHabits)
+   }, [])
+   console.log(habits)
   return (
    
     <>
@@ -15,10 +24,10 @@ function App() {
           <AboutPage />
         </Route>
         <Route path = "/main-page">
-          <MainPage />
+          <MainPage habits={habits}/>
         </Route>
-        <Route path = " notes-page">
-           <NotesPage/>
+        <Route path = "/notes-page">
+           <NotesPage habits={habits}/>
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>
