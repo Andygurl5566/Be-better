@@ -5,7 +5,7 @@ function NotesPage(){
     return (
 
     <>
-    <GlobalHeader />
+        <GlobalHeader />
     </>
     )
 

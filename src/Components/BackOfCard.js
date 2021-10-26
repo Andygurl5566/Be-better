@@ -1,5 +1,3 @@
-
-
 function BackOfCard(){
 
     return(
