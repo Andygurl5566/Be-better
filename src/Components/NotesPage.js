@@ -3,9 +3,9 @@ import HabbitContainer from "./HabbitContainer"
 
 function NotesPage(){
     return (
-
     <>
     <GlobalHeader />
+    
     </>
     )
 
