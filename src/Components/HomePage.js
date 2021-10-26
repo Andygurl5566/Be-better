@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 
 
 function HomePage(){
@@ -10,7 +12,7 @@ function HomePage(){
             <p> Summary </p>
         </div>
 
-        <button> Let's Go </button>
+        <button><Link to="/main-page"> Let's Go </Link> </button>
 
 
 
