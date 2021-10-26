@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #7a7a7a;
 }
 
 code {
@@ -27,33 +28,42 @@ code {
 .globalHeader {
   text-align: center;
   width: 100%;
-  border: red solid 2px;
+  /*border: red solid 2px;*/
   margin: 5px 0px;
+  background-color: #1f1f1f;
+  color: #5292b7
 
 }
 
 .habbitContainer {
   display: flex;
   flex-direction: row;
-  border: red solid 2px;
+  /*border: red solid 2px;*/
   margin: 5px 0px;
   justify-content: space-evenly;
+  background-color: #1f1f1f;
 }
 
 .habbitList {
   width: 400px;
-  border: blue solid 2px;
+  /*border: blue solid 2px;*/
+  border-radius: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   margin: 5px 0px;
+  background-color: #2e294e;
 }
 .containerTitle {
-  border: green solid 2px;
+  /*border: green solid 2px;*/
+  border-radius: 10px;
   margin: 10px;
+  background-color: #5292b7;
 }
 
 .Habbit {
-  border: green solid 2px;
+  /*border: green solid 2px;*/
+  border-radius: 15px;
   margin: 10px;
+  background-color: #5292b7;
 }
