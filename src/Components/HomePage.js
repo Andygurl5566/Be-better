@@ -8,7 +8,7 @@ function HomePage(){
         <>
 
         <div>
-            <h1> Title </h1>
+            <h1> Welcome to Be Better! </h1>
             <p> Summary </p>
         </div>
 
