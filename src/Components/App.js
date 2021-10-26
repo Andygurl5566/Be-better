@@ -1,9 +1,9 @@
 
 import {Switch, Route} from "react-router-dom"
-import HomePage from './HomePage';
+import AboutPage from './AboutPage';
 import {Link} from "react-router-dom"
 import MainPage from "./MainPage"
-import NotesPage from ". NotesPage";
+import NotesPage from "./NotesPage";
 import Logo from './Logo';
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Link to = "/"> <Logo/> </Link>
       <Switch>
         <Route exact path = "/">
-          <HomePage />
+          <AboutPage />
         </Route>
         <Route path = "/main-page">
           <MainPage />
