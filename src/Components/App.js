@@ -24,10 +24,10 @@ function App() {
           <AboutPage />
         </Route>
         <Route path = "/main-page">
-          <MainPage />
+          <MainPage habits={habits}/>
         </Route>
-        <Route path = " notes-page">
-           <NotesPage/>
+        <Route path = "/notes-page">
+           <NotesPage habits={habits}/>
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>

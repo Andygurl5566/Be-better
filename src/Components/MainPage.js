@@ -2,7 +2,7 @@ import GlobalHeader from './GlobalHeader'
 import HabbitContainer from './HabbitContainer'
 
 
-function MainPage () {
+function MainPage ({habits}) {
 
     return (
         <div>
