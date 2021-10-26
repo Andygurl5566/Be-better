@@ -5,9 +5,9 @@ import {Link} from "react-router-dom"
 function HomePage(){
 
     return (
-        <div>
+        <>
 
-        <div className ="homepage">
+        <div>
             <h1> Title </h1>
             <p> Summary </p>
         </div>
@@ -16,7 +16,7 @@ function HomePage(){
 
 
 
-        </div>
+        </>
     )
 
 }

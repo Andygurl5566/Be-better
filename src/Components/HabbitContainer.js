@@ -5,7 +5,7 @@ function HabbitContainer () {
 
 
     return (
-        <div className = 'HabbitContainer'>
+        <div className = 'habbitContainer'>
             <GoodHabbits />
             <BadHabbits /> 
         </div>

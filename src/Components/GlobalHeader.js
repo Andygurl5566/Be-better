@@ -5,7 +5,7 @@ import BadHabbits from "./BadHabbits";
 function GlobalHeader () {
 
     return (
-        <div>
+        <div className = "globalHeader">
             <h2>BeBetter</h2>
             <h4>Creating systems to Achive and Surpass Goals.</h4>
         </div>
