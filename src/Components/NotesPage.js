@@ -1,16 +1,16 @@
 import GlobalHeader from "./GlobalHeader"
-import HabbitContainer from "./HabbitContainer"
+import {Link} from "react-router-dom"
 
-function NotesPage(){
+
+function NotesPage({habits}){
     return (
-    <>
-<<<<<<< HEAD
-    <GlobalHeader />
-    
-=======
+    <div>
         <GlobalHeader />
->>>>>>> ffa70eb28e28842d1d8b8243f170f67565f1f5c8
-    </>
+        <div className = "button-div">
+            <Link to ="/main-page"> <button> Back</button></Link>
+        </div>
+    
+    </div>
     )
 
 }
