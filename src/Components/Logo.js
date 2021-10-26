@@ -3,7 +3,7 @@
 function Logo(){
     return(
         <>
-        <h1> LOGO WILL GO HERE </h1>
+        <h1 className = "logo"> LOGO WILL GO HERE </h1>
         </>
     )
 }
