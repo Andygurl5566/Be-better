@@ -14,7 +14,7 @@ function App() {
     .then(r => r.json())
     .then(setHabits)
    }, [])
-   console.log(setHabits)
+   console.log(habits)
   return (
    
     <>

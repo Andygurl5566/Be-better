@@ -8,7 +8,7 @@ function MainPage ({habits}) {
             <div className = "button-div">
             <Link to ="/notes-page"> <button> Notes </button></Link>
             </div>
-            <HabbitContainer />
+            <HabbitContainer habits = {habits}/>
         </div>
     )
 }

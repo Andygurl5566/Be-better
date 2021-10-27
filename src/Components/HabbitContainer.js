@@ -3,11 +3,18 @@ import BadHabbits from  './BadHabbits'
 
 function HabbitContainer ({habits}) {
 
+    function filterGood() {
+        return habits.filter(habit => habit.good === true)
+    }
+
+    function filterBad () {
+        return habits.filter(habit => habit.good === false)
+    }
 
     return (
         <div className = 'habbitContainer'>
-            <GoodHabbits habits={habits}/>
-            <BadHabbits habits={habits}/> 
+            <GoodHabbits goodHabits={filterGood()}/>
+            <BadHabbits badHabits={filterBad()}/> 
         </div>
     )
 }

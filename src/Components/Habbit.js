@@ -1,13 +1,18 @@
 
 
 
-function Habbit () {
+function Habbit (habit) {
 
+    function test () {
+        console.log(habit)
+    }
     return (
         <div className = "Habbit">
-            <h3>This is a Div!</h3>
+            <h3>{habit.habit.name}</h3>
+            <img />
             <h1>📖</h1>
-            <button>TestButton!</button>
+            <button onClick = {test}>TestButton!</button>
+            {console.log(habit)}
         </div>
     )
 }
