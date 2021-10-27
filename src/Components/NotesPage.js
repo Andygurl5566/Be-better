@@ -3,14 +3,14 @@ import {Link} from "react-router-dom"
 import NotesContainer from "./NotesContainer.js"
 
 
-function NotesPage({habits, chosen}){
+function NotesPage({chosen}){
     console.log(chosen.length)
     return (
     <div>
         <GlobalHeader />
             <div className = "button-div">
                 <Link to ="/main-page"> <button> Back</button></Link>
-                <NotesContainer chosen={chosen}/>
+                <NotesContainer key={chosen.id} chosen={chosen}/>
             </div>
     
     </div>
