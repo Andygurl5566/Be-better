@@ -1,13 +1,13 @@
 import Habbit from './Habbit'
 
 
-function GoodHabbits ({goodHabits}) {
+function GoodHabbits ({goodHabits, handleChosen}) {
     console.log(goodHabits)
 
     return (
         <div className = "habbitList" id = 'GoodHabbits' >
             <h3 className = 'containerTitle'>Good Habbits to Learn</h3>
-            {goodHabits.map(habit => <Habbit key={habit.id} habit={habit}/>)}
+            {goodHabits.map(habit => <Habbit handleChosen={handleChosen} key={habit.id} habit={habit}/>)}
         </div>
     )
 }

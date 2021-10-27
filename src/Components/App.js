@@ -8,13 +8,33 @@ import Logo from './Logo';
 import MainPage from "./MainPage";
 
 function App() {
+  const [chosen, setChosen] = useState([])
   const [habits, setHabits] = useState([])
   useEffect(() => {
     fetch("http://localhost:4000/habits")
     .then(r => r.json())
     .then(setHabits)
    }, [])
-   console.log(habits)
+   //console.log(habits)
+
+  function handleChosen(id) {
+    fetch(`http://localhost:4000/habits/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        chosen: true
+      }),
+      headers: {
+        "Content-type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(data => setChosen([...chosen, data]))
+    
+  }
+
+
+
+
   return (
    
     <>
@@ -24,7 +44,7 @@ function App() {
           <AboutPage />
         </Route>
         <Route path = "/main-page">
-          <MainPage habits={habits}/>
+          <MainPage chosen= {chosen} handleChosen={handleChosen} habits={habits}/>
         </Route>
         <Route path = "/notes-page">
            <NotesPage habits={habits}/>
