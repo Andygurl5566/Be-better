@@ -10,7 +10,7 @@ function NotesPage({habits, chosen}){
         <GlobalHeader />
             <div className = "button-div">
                 <Link to ="/main-page"> <button> Back</button></Link>
-                <NotesContainer notes={chosen}/>
+                <NotesContainer chosen={chosen}/>
             </div>
     
     </div>

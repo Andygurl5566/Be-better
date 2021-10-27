@@ -33,9 +33,12 @@ function App() {
   }
 
   const chosenFilter = () => {
+    if(habits.length > 0){
     return habits.filter(habit => habit.chosen === true)
-  }
-
+  } else {
+    return []
+  }}
+  console.log(chosenFilter())
 
 
   return (
@@ -50,6 +53,7 @@ function App() {
           <MainPage chosen= {chosen} handleChosen={handleChosen} habits={habits}/>
         </Route>
         <Route path = "/notes-page">
+          {console.log(chosenFilter())}
            <NotesPage chosen={chosenFilter()} habits={habits}/>
         </Route>
         <Route path = "*">

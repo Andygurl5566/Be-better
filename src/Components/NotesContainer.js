@@ -7,7 +7,7 @@ function NotesContainer ({chosen}) {
     console.log(chosen)
     return (
         <div className = 'notesContainer'>
-            {chosen.length > 0 ? chosen.map(chosenHabit => <ChosenHabits chosenHabit={chosenHabit}/>) : null} 
+            {chosen === [] ? null : chosen.map(chosenHabit => <ChosenHabits chosenHabit={chosenHabit}/>)} 
             
             <HabitNotes chosen={chosen}/>
         </div>
