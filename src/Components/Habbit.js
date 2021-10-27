@@ -1,12 +1,12 @@
 
 
 
-function Habbit ({habit}) {
+function Habbit ({habit, handleChosen}) {
 
-    console.log(habit)
+    //console.log(habit)
     
     function test () {
-       
+       handleChosen(habit.id)
     }
     return (
         <div className = "Habbit" >
@@ -14,7 +14,6 @@ function Habbit ({habit}) {
             <img />
             <h1>📖</h1>
             <button onClick = {test}> Add Habit </button>
-            {console.log(habit)}
         </div>
     )
 }
