@@ -11,7 +11,7 @@ function Habbit (habit) {
             <h3>{habit.habit.name}</h3>
             <img />
             <h1>📖</h1>
-            <button onClick = {test}>TestButton!</button>
+            <button onClick = {test}> Add Habit </button>
             {console.log(habit)}
         </div>
     )
