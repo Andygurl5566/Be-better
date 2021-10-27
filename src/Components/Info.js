@@ -1,6 +1,8 @@
+import styled from "styled-components"
+
 function Info(){
     return(
-        <>
+        <Styleddiv>
             <p>
                 Hobit Habit builds off of the concepts detailed in the book "Atomic Habits". 
                  All habit result in a response. Positive responses are knowledge, relationships, productivity 
@@ -15,9 +17,30 @@ function Info(){
                 <li> 4: Environment - Create an environment that makes it easier to achieve your goals  </li>
                 <li> 5: Make it attractive - Make our goals attractive so that we can look forward to building your habit.`  </li>
             </ul>
-        </>
+        </Styleddiv>
     )
 
 }
 
 export default Info
+
+const Styleddiv = styled.div`
+
+p{
+    display: inline-block;
+    padding-right: 200px;
+    padding-left:200px
+}
+
+ul{
+    display: inline-block;
+   
+ 
+}
+
+li{
+    list-style:none;
+    text-align:left;  
+   
+}
+`
