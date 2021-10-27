@@ -1,13 +1,13 @@
 import GoodHabbits from './GoodHabbits'
 import BadHabbits from  './BadHabbits'
 
-function HabbitContainer () {
+function HabbitContainer ({habits}) {
 
 
     return (
         <div className = 'habbitContainer'>
-            <GoodHabbits />
-            <BadHabbits /> 
+            <GoodHabbits habits={habits}/>
+            <BadHabbits habits={habits}/> 
         </div>
     )
 }

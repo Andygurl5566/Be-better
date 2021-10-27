@@ -7,7 +7,7 @@ function MainPage ({habits}) {
     return (
         <div>
             <GlobalHeader />
-            <HabbitContainer />
+            <HabbitContainer habits={habits}/>
         </div>
     )
 }

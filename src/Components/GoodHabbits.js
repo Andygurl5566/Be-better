@@ -1,7 +1,7 @@
 import Habbit from './Habbit'
 
 
-function GoodHabbits () {
+function GoodHabbits ({habits}) {
 
     return (
         <div className = "habbitList" id = 'GoodHabbits'>
