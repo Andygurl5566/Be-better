@@ -1,6 +1,6 @@
 
-function ChosenHabits(){
-
+function ChosenHabits({chosenHabit}){
+    console.log(chosenHabit)
     return(
         <div>
             <h3 className ="containerTitle"> My Habits </h3> 

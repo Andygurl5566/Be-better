@@ -2,13 +2,14 @@
 import ChosenHabits from "./ChosenHabits"
 import HabitNotes from './HabitNotes'
 
-function NotesContainer () {
+function NotesContainer ({chosen}) {
 
-
+    console.log(chosen)
     return (
         <div className = 'notesContainer'>
-            <ChosenHabits/> 
-            <HabitNotes/>
+            {chosen.length > 0 ? chosen.map(chosenHabit => <ChosenHabits chosenHabit={chosenHabit}/>) : null} 
+            
+            <HabitNotes chosen={chosen}/>
         </div>
     )
 }

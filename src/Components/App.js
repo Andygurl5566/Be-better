@@ -32,6 +32,9 @@ function App() {
     
   }
 
+  const chosenFilter = () => {
+    return habits.filter(habit => habit.chosen === true)
+  }
 
 
 
@@ -47,7 +50,7 @@ function App() {
           <MainPage chosen= {chosen} handleChosen={handleChosen} habits={habits}/>
         </Route>
         <Route path = "/notes-page">
-           <NotesPage habits={habits}/>
+           <NotesPage chosen={chosenFilter()} habits={habits}/>
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>
