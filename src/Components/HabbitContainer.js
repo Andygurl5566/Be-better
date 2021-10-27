@@ -6,6 +6,7 @@ function HabbitContainer ({habits}) {
     function filterGood() {
         return habits.filter(habit => habit.good === true)
     }
+    console.log(filterGood())
 
     function filterBad () {
         return habits.filter(habit => habit.good === false)

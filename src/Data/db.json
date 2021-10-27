@@ -3,7 +3,7 @@
       {
         "id": 1,
         "good": true,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Read more books",
         "notes": "I would like to start reading 1 book a month",
@@ -12,7 +12,7 @@
       {
         "id": 2,
         "good": true,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Wake Up Earlier",
         "notes": "I would like to wake up earlier in the morning",
@@ -30,7 +30,7 @@
       {
         "id": 4,
         "good": true,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Learn an Instrument",
         "notes": "I would like to learn to play a musical instrument",
@@ -39,7 +39,7 @@
       {
         "id": 5,
         "good": true,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Exercise Consistantly",
         "notes": "I would like to start getting in a consistant workout",
@@ -48,7 +48,7 @@
       {
         "id": 6,
         "good": false,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Stop Eating Junk Food",
         "notes": "I would like to eat Heathier",
@@ -57,7 +57,7 @@
       {
         "id": 7,
         "good": false,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Stop Biting Nails",
         "notes": "I would like to stop biting my nails.",
@@ -66,7 +66,7 @@
       {
         "id": 8,
         "good": false,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Stop Impulse Buying",
         "notes": "I would like to stop buying as many things on impulse",
@@ -75,7 +75,7 @@
       {
         "id": 9,
         "good": false,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Excessive Drinking",
         "notes": "I would like to cut back on my alcohol intake",
@@ -84,7 +84,7 @@
       {
         "id": 10,
         "good": false,
-        "chosen": true,
+        "chosen": false,
         "accomplished": false,
         "name": "Skipping Breakfast",
         "notes": "I would like to stop skipping meals",
