@@ -72,3 +72,23 @@ code {
 
   text-align: center ;
 }
+
+.notesContainer {
+  display: flex;
+  flex-direction: row;
+  /*border: red solid 2px;*/
+  margin: 5px 0px;
+  justify-content: space-evenly;
+  background-color: #1f1f1f;
+}
+
+.notes {
+  /*border: green solid 2px;*/
+  border-radius: 15px;
+  margin: 10px;
+  background-color: #5292b7;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
