@@ -4,9 +4,9 @@
 function Habbit ({habit}) {
 
     console.log(habit)
-    const [chose, setChosen] = useState(habit.chosen)
+    
     function test () {
-        setChosen(!chosen)
+       
     }
     return (
         <div className = "Habbit" >
