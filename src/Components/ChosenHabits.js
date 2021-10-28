@@ -25,7 +25,7 @@ function ChosenHabits({chosenHabit, setDisplayHabit, handleUnChosen}){
         <div> 
             <h3 className ="containerTitle">{chosenHabit.name}</h3> 
             <div className = "Habbit">
-                <h3>{removeHabit.notes}</h3>
+                <h3>{removeHabit}</h3>
                 <img src = {chosenHabit.image} width="300px" alt = {chosenHabit.name}/>
                 <div>
                     <button onClick={handleDetail}>Details</button>

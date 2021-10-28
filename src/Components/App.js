@@ -32,7 +32,7 @@ function App() {
     temp.id= (habits.length + 1)
     console.log(temp)
     
-    fetch(`http://localhost:4000/habits/`, {
+    fetch(`http://localhost:4000/habits`, {
       method: 'POST',
       body: JSON.stringify(
         temp

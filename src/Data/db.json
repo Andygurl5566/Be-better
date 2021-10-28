@@ -6,7 +6,7 @@
       "chosen": false,
       "accomplished": false,
       "name": "Read more books",
-      "notes": "I would like to start reading 1 book a month",
+      "notes": "I would like to start reading 1 bookgegegege a month",
       "image": "https://tse2.mm.bing.net/th?id=OIP.YVNcjAORCCZiOOJexvQHmgHaE8&pid=Api&P=0&w=259&h=174"
     },
     {
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "good": false,
-      "chosen": false,
+      "chosen": true,
       "accomplished": false,
       "name": "Stop Eating Junk Food",
       "notes": "I would like to eat Heathier",
@@ -89,15 +89,6 @@
       "name": "Skipping Breakfast",
       "notes": "I would like to stop skipping meals",
       "image": "https://tse2.mm.bing.net/th?id=OIP.LBCU6avnYF2FzNzQ3w_xVwHaE6&pid=Api&P=0&w=244&h=163"
-    },
-    
-    {
-      "chosen": false,
-      "accomplished": false,
-      "name": "",
-      "notes": "",
-      "image": "",
-      "id": 12
     }
   ],
   "ExtraDataIfWeNeedIt": [

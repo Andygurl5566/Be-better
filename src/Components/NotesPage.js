@@ -14,6 +14,7 @@ function NotesPage({chosen, patchNotes, handleUnChosen}){
     return (
     <div>
         <GlobalHeader />
+
             <div className = "button-div">
                 <Link to ="/main-page"> 
                      <button> Back </button>
