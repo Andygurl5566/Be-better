@@ -75,7 +75,7 @@
     {
       "id": 9,
       "good": false,
-      "chosen": false,
+      "chosen": true,
       "accomplished": false,
       "name": "Excessive Drinking",
       "notes": "I would like to cut back on my alcohol intake",
@@ -89,6 +89,14 @@
       "name": "Skipping Breakfast",
       "notes": "I would like to stop skipping meals",
       "image": "https://tse2.mm.bing.net/th?id=OIP.LBCU6avnYF2FzNzQ3w_xVwHaE6&pid=Api&P=0&w=244&h=163"
+    },
+    {
+      "chosen": true,
+      "accomplished": false,
+      "name": "Being Splendid",
+      "notes": "",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.4tIlD-F1r7tKsE71ttOnbgHaFV&pid=Api&P=0&w=245&h=177",
+      "id": 11
     }
   ],
   "ExtraDataIfWeNeedIt": [

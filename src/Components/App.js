@@ -10,12 +10,35 @@ import MainPage from "./MainPage";
 function App() {
   const [chosen, setChosen] = useState([])
   const [habits, setHabits] = useState([])
+  const [newHabit, setNewHabit] = useState([])
   useEffect(() => {
     fetch("http://localhost:4000/habits")
     .then(r => r.json())
     .then(setHabits)
     .then(setChosen(habits.filter(habit => habit.chosen === true)))
    }, [])
+
+   console.log(habits)
+  //attempting to add new habits to the habit list
+
+  function handleNewHabit(formObj){
+
+    let temp = formObj
+    temp.id= (habits.length + 1)
+    console.log(temp)
+    
+    fetch(`http://localhost:4000/habits/`, {
+      method: 'POST',
+      body: JSON.stringify(
+        temp
+      ),
+      headers: {
+        "Content-type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(data => setHabits(data, ...habits ))
+} 
 
 
   function handleChosen(id) {
@@ -33,13 +56,14 @@ function App() {
     
   }
 
-  const chosenFilter = () => {
-    if(habits.length > 0){
-    return habits.filter(habit => habit.chosen === true)
-  } else {
-    return []
-  }}
+  // const chosenFilter = () => {
+  //   if(habits.length > 0){
+  //   return habits.filter(habit => habit.chosen === true)
+  // } else {
+  //   return []
+  // }}
   //console.log(chosenFilter())
+
 
 
   return (
@@ -51,10 +75,10 @@ function App() {
           <AboutPage />
         </Route>
         <Route path = "/main-page">
-          <MainPage chosen= {chosen} handleChosen={handleChosen} habits={habits}/>
+          <MainPage chosen= {chosen} handleNewHabit={handleNewHabit} handleChosen={handleChosen} habits={habits}/>
         </Route>
         <Route path = "/notes-page">
-          {console.log(chosenFilter())}
+          {/* {console.log(chosenFilter())} */}
            <NotesPage chosen={chosen} habits={habits}/> {/*passed chosen instead of chosenFilter.  both kinda work, need to adjust this. */}
         </Route>
         <Route path = "*">
