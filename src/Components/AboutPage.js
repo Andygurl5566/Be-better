@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
 import React, {useState} from "react"
 import Info from "./Info"
+import styled from "styled-components"
 
 
 function AboutPage(){
@@ -11,13 +12,12 @@ let welcome = ` Welcome to Hobbit Habits where small habits can make a huge chan
 const [moreInfo, setMoreInfo] = useState(false)
 
 function handleClick(){
-
     setMoreInfo(!moreInfo)
 }
 
     return (
         <>
-            <div className="summary-container">
+            <Styleddiv className="summary-container">
                 <div>
                     <h1> Hobbit Habits</h1>
                     <h3> Small habits, large results </h3>
@@ -25,11 +25,33 @@ function handleClick(){
                     <button onClick = {handleClick}> Learn More</button>
                      {moreInfo === false? "" : <Info/> }  
                 </div>
+                <div>
                 <button><Link to="/main-page"> Let's Go </Link> </button>
-            </div>
+                </div>
+            </Styleddiv>
         </>
     )
 
 }
 
 export default AboutPage
+
+const Styleddiv = styled.div`
+
+padding-left: 100px;
+padding-right:100px;
+
+div{
+padding-bottom: 10px;
+}
+
+button{
+    padding:15px;
+}
+
+h1{
+
+}
+
+
+`
