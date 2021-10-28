@@ -5,13 +5,13 @@ import Info from "./Info"
 
 function AboutPage(){
 
-let welcome = ` Welcome to Hobit Habits where small habits can make a huge change! Add a habit that you'd like to change by clicking 
+let welcome = ` Welcome to Hobbit Habits where small habits can make a huge change! Add a habit that you'd like to change by clicking 
 "Add Habit". To view more details about a habit, visit the notes tab.`
 
 const [moreInfo, setMoreInfo] = useState(false)
 
 function handleClick(){
-    console.log(moreInfo) 
+
     setMoreInfo(!moreInfo)
 }
 

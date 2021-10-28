@@ -15,7 +15,7 @@ function App() {
     .then(r => r.json())
     .then(setHabits)
    }, [])
-   //console.log(habits)
+
 
   function handleChosen(id) {
     fetch(`http://localhost:4000/habits/${id}`, {
