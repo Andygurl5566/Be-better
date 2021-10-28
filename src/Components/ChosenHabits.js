@@ -1,13 +1,18 @@
 
-function ChosenHabits({chosenHabit}){
-    console.log(chosenHabit)
+function ChosenHabits({chosenHabit, setDisplayHabit}){
+    //console.log(chosenHabit)
+
+    const handleDetail = () => {
+        setDisplayHabit(chosenHabit)
+    }
+
     return(
         <div>
-            <h3 className ="containerTitle"> My Habits </h3> 
+            <h3 className ="containerTitle">{chosenHabit.name}</h3> 
             <div className = "Habbit">
-                <h3>This is where chosen habits will go</h3>
+                <h3>{chosenHabit.notes}</h3>
                 <h1>📖</h1>
-                <button>Details</button>
+                <button onClick={handleDetail}>Details</button>
             </div>
         </div>
     )

@@ -14,6 +14,7 @@ function App() {
     fetch("http://localhost:4000/habits")
     .then(r => r.json())
     .then(setHabits)
+    .then(setChosen(habits.filter(habit => habit.chosen === true)))
    }, [])
 
 
@@ -38,7 +39,7 @@ function App() {
   } else {
     return []
   }}
-
+  //console.log(chosenFilter())
 
 
   return (
@@ -53,7 +54,8 @@ function App() {
           <MainPage chosen= {chosen} handleChosen={handleChosen} habits={habits}/>
         </Route>
         <Route path = "/notes-page">
-           <NotesPage chosen={chosenFilter()} habits={habits}/>
+          {console.log(chosenFilter())}
+           <NotesPage chosen={chosen} habits={habits}/> {/*passed chosen instead of chosenFilter.  both kinda work, need to adjust this. */}
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>

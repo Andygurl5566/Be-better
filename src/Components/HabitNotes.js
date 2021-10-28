@@ -1,10 +1,10 @@
 
-function HabitNotes(){
+function HabitNotes({displayHabit}){
     return(
         <div>
-            <h3 className ="containerTitle"> Notes </h3> 
+            <h3 className ="containerTitle">{displayHabit.name}</h3> 
                 <div className = "notes" >
-                    <p> This is where notes will go </p>
+                <textarea rows="4" cols="50" value={displayHabit.notes}></textarea>
                 </div>
         </div>
     )
