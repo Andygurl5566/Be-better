@@ -39,7 +39,7 @@ function App() {
       }
     })
     .then(res => res.json())
-    .then(data => setHabits(data, ...habits ))
+    .then(data => setHabits([data, ...habits ]))
 } 
 
 
