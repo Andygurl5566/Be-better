@@ -10,8 +10,9 @@ import MainPage from "./MainPage";
 function App() {
   const [chosen, setChosen] = useState([])
   const [habits, setHabits] = useState([])
-  const [newHabit, setNewHabit] = useState([])
   const [renderToggle, setRenderToggle] = useState(true)
+
+  //adds data
   useEffect(() => {
     fetch("http://localhost:4000/habits")
     .then(r => r.json())
@@ -21,9 +22,10 @@ function App() {
     })
   }, [renderToggle])
 
-   console.log(habits)
-  //attempting to add new habits to the habit list
+  //  console.log(habits)
 
+
+  //adds new habits to the habit list
   function handleNewHabit(formObj){
 
     let temp = formObj
@@ -43,8 +45,9 @@ function App() {
     .then(data => setHabits([data, ...habits ]))
 } 
 
+
+  //updates the notes
   const patchNotes = (id, notesUpdate) => {
-    //console.log(id, notesUpdate)
     fetch(`http://localhost:4000/habits/${id}`, {
       method: 'PATCH',
       body: JSON.stringify({
@@ -59,6 +62,8 @@ function App() {
     setRenderToggle(!renderToggle)
   }
 
+
+  //adds chosen note to main page
   function handleChosen(id) {
     fetch(`http://localhost:4000/habits/${id}`, {
       method: 'PATCH',
@@ -74,14 +79,21 @@ function App() {
     
   }
 
-  // const chosenFilter = () => {
-  //   if(habits.length > 0){
-  //   return habits.filter(habit => habit.chosen === true)
-  // } else {
-  //   return []
-  // }}
-  //console.log(chosenFilter())
-
+// remove chosen
+  function handleUnChosen(id) {
+    fetch(`http://localhost:4000/habits/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        chosen: false
+      }),
+      headers: {
+        "Content-type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    setRenderToggle(!renderToggle)
+    
+  }
 
 
   return (
@@ -93,11 +105,11 @@ function App() {
           <AboutPage />
         </Route>
         <Route path = "/main-page">
-          <MainPage chosen= {chosen} handleNewHabit={handleNewHabit} handleChosen={handleChosen} habits={habits}/>
+          <MainPage chosen= {chosen} handleNewHabit={handleNewHabit} handleChosen={handleChosen}  habits={habits}/>
         </Route>
         <Route path = "/notes-page">
           {/* {console.log(chosenFilter())} */}
-           <NotesPage patchNotes={patchNotes} chosen={chosen} habits={habits}/> {/*passed chosen instead of chosenFilter.  both kinda work, need to adjust this. */}
+           <NotesPage patchNotes={patchNotes} handleUnChosen={handleUnChosen} chosen={chosen} habits={habits}/> {/*passed chosen instead of chosenFilter.  both kinda work, need to adjust this. */}
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>

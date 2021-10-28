@@ -3,23 +3,22 @@ import {Link} from "react-router-dom"
 import NotesContainer from "./NotesContainer.js"
 
 
-function NotesPage({chosen, patchNotes}){
-    console.log(chosen.length)
+function NotesPage({chosen, patchNotes, handleUnChosen}){
+   
 
     const notesTest = () => {
-        console.log(chosen)
+     
     }
 
 
     return (
     <div>
         <GlobalHeader />
-        {/* <button onClick={notesTest}>Notes Test</button> */}
             <div className = "button-div">
                 <Link to ="/main-page"> 
                      <button> Back </button>
                 </Link>
-                <NotesContainer patchNotes={patchNotes} key={chosen.id} chosen={chosen}/>
+                <NotesContainer patchNotes={patchNotes} key={chosen.id} chosen={chosen} handleUnChosen={handleUnChosen}/>
             </div>
     
     </div>

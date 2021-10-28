@@ -2,17 +2,17 @@ import React, {useState} from "react"
 
 
 
-function ChosenHabits({chosenHabit, setDisplayHabit}){
+function ChosenHabits({chosenHabit, setDisplayHabit, handleUnChosen}){
 
    //attempting to add functionality to remove button here ------ 
-    const [removeHabit, setRemove] = useState(chosenHabit.chosen)
-    //console.log(chosenHabit.good)
+    const [removeHabit, setRemove] = useState(false)
 
     function handleRemove(){
         
         setRemove(!removeHabit)
+        handleUnChosen(chosenHabit.id)
     }
-    //-----------------------------------------------------------
+
 
 
     const handleDetail = () => {
@@ -22,16 +22,16 @@ function ChosenHabits({chosenHabit, setDisplayHabit}){
 
 
     return(
-        <div>
+        <div> 
             <h3 className ="containerTitle">{chosenHabit.name}</h3> 
             <div className = "Habbit">
-                <h3>{chosenHabit.notes}</h3>
+                <h3>{removeHabit.notes}</h3>
                 <img src = {chosenHabit.image} width="300px" alt = {chosenHabit.name}/>
                 <div>
                     <button onClick={handleDetail}>Details</button>
-                    <button onClick={handleRemove}>Remove</button>
+                    <button onClick={handleRemove} >Remove</button>
                 </div>
-            </div>
+            </div> 
         </div>
     )
 }
