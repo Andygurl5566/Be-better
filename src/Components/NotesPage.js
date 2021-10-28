@@ -9,7 +9,7 @@ function NotesPage({chosen}){
     <div>
         <GlobalHeader />
             <div className = "button-div">
-                <Link to ="/main-page"> <button> Back</button></Link>
+                <Link to ="/main-page"> <button> Back </button></Link>
                 <NotesContainer key={chosen.id} chosen={chosen}/>
             </div>
     

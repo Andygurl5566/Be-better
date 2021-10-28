@@ -11,7 +11,7 @@ function Habbit ({habit, handleChosen}) {
     return (
         <div className = "Habbit" >
             <h3>{habit.name}</h3>
-            <img />
+            <img src ={habit.image} width = "250px"/>
             <h1>📖</h1>
             <button onClick = {test}> Add Habit </button>
         </div>
