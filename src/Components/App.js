@@ -14,9 +14,11 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:4000/habits")
     .then(r => r.json())
-    .then(setHabits)
-    .then(setChosen(habits.filter(habit => habit.chosen === true)))
-   }, [])
+    .then((data) => {
+      setHabits(data)
+      setChosen(data.filter(habit => habit.chosen === true))
+    })
+  }, [])
 
    console.log(habits)
   //attempting to add new habits to the habit list
