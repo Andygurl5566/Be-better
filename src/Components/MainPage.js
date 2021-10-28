@@ -22,7 +22,7 @@ function MainPage ({habits, handleChosen, chosen, handleNewHabit}) {
             <GlobalHeader />
             <Styledh3>Dont see the habit you are looking for below? <button onClick = {handleClick}> Add it here! </button></Styledh3>
             {moreInfo ? <Form  handleNewHabit={handleNewHabit}/> : ""}
-            <button onClick={testing}>test</button>
+            {/* <button onClick={testing}>test</button> */}
             <div className = "button-div">
                 <Link to ="/notes-page"> <button> View My Habits </button></Link>
             </div>

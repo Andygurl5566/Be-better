@@ -14,9 +14,11 @@ function NotesPage({chosen}){
     return (
     <div>
         <GlobalHeader />
-        <button onClick={notesTest}>Notes Test</button>
+        {/* <button onClick={notesTest}>Notes Test</button> */}
             <div className = "button-div">
-                <Link to ="/main-page"> <button> Back </button></Link>
+                <Link to ="/main-page"> 
+                     <button> Back </button>
+                </Link>
                 <NotesContainer key={chosen.id} chosen={chosen}/>
             </div>
     

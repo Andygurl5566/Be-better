@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import styled from "styled-components"
 
 
 function HabitNotes({displayHabit}){
@@ -21,11 +22,17 @@ function HabitNotes({displayHabit}){
             <h3 className ="containerTitle">{displayHabit.name}</h3> 
                 <div className = "notes" >
                 <textarea disabled={disabled} onChange={handleChange} rows="6" cols="50" value={disabled? displayHabit.notes : noteText}></textarea>
-                <button onClick={handleEdit}>Edit Notes</button>
-                <button>Save Notes</button>
+                <div>
+                    <button onClick={handleEdit}>Edit Notes</button>
+                    <button>Save Notes</button>
+                </div>
                 </div>
         </div>
     )
 }
 
 export default HabitNotes
+
+const Styleddiv = styled.div`
+
+`
