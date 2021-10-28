@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import NotesContainer from "./NotesContainer.js"
 
 
-function NotesPage({chosen}){
+function NotesPage({chosen, patchNotes}){
     console.log(chosen.length)
 
     const notesTest = () => {
@@ -19,7 +19,7 @@ function NotesPage({chosen}){
                 <Link to ="/main-page"> 
                      <button> Back </button>
                 </Link>
-                <NotesContainer key={chosen.id} chosen={chosen}/>
+                <NotesContainer patchNotes={patchNotes} key={chosen.id} chosen={chosen}/>
             </div>
     
     </div>

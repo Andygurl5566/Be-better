@@ -11,6 +11,7 @@ function App() {
   const [chosen, setChosen] = useState([])
   const [habits, setHabits] = useState([])
   const [newHabit, setNewHabit] = useState([])
+  const [renderToggle, setRenderToggle] = useState(true)
   useEffect(() => {
     fetch("http://localhost:4000/habits")
     .then(r => r.json())
@@ -18,7 +19,7 @@ function App() {
       setHabits(data)
       setChosen(data.filter(habit => habit.chosen === true))
     })
-  }, [])
+  }, [renderToggle])
 
    console.log(habits)
   //attempting to add new habits to the habit list
@@ -42,6 +43,21 @@ function App() {
     .then(data => setHabits(data, ...habits ))
 } 
 
+  const patchNotes = (id, notesUpdate) => {
+    //console.log(id, notesUpdate)
+    fetch(`http://localhost:4000/habits/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        notes: notesUpdate
+      }),
+      headers: {
+        "Content-type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(update => console.log(update))
+    setRenderToggle(!renderToggle)
+  }
 
   function handleChosen(id) {
     fetch(`http://localhost:4000/habits/${id}`, {
@@ -81,7 +97,7 @@ function App() {
         </Route>
         <Route path = "/notes-page">
           {/* {console.log(chosenFilter())} */}
-           <NotesPage chosen={chosen} habits={habits}/> {/*passed chosen instead of chosenFilter.  both kinda work, need to adjust this. */}
+           <NotesPage patchNotes={patchNotes} chosen={chosen} habits={habits}/> {/*passed chosen instead of chosenFilter.  both kinda work, need to adjust this. */}
         </Route>
         <Route path = "*">
           <h1> 404 not found</h1>

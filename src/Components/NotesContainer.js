@@ -4,17 +4,17 @@ import HabitNotes from './HabitNotes'
 import styled from "styled-components"
 
 
-function NotesContainer ({chosen}) {
+function NotesContainer ({chosen, patchNotes}) {
 
     const [displayHabit, setDisplayHabit] = useState({name: 'Default Display', notes: 'note, note, note note note.'})
-    console.log(chosen)
+    //console.log(chosen)
     return (
         <Styleddiv>
             <div className = 'notesContainer'>
                 {chosen === [] ? null : chosen.map(chosenHabit => <ChosenHabits setDisplayHabit={setDisplayHabit} key={chosen.id} chosenHabit={chosenHabit}/>)} 
             </div>
             <div className="chosen-note">
-                <HabitNotes key={chosen.id} displayHabit={displayHabit}/>
+                <HabitNotes patchNotes={patchNotes} key={chosen.id} displayHabit={displayHabit}/>
             </div>
         </Styleddiv>
     )
