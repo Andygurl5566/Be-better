@@ -4,7 +4,7 @@ import NotesContainer from "./NotesContainer.js"
 
 
 function NotesPage({chosen}){
-    console.log(chosen.length)
+    console.log(chosen)
     return (
     <div>
         <GlobalHeader />

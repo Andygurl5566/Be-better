@@ -15,7 +15,7 @@ function App() {
     .then(r => r.json())
     .then(setHabits)
    }, [])
-   //console.log(habits)
+
 
   function handleChosen(id) {
     fetch(`http://localhost:4000/habits/${id}`, {
@@ -38,7 +38,7 @@ function App() {
   } else {
     return []
   }}
-  console.log(chosenFilter())
+
 
 
   return (
@@ -53,7 +53,6 @@ function App() {
           <MainPage chosen= {chosen} handleChosen={handleChosen} habits={habits}/>
         </Route>
         <Route path = "/notes-page">
-          {console.log(chosenFilter())}
            <NotesPage chosen={chosenFilter()} habits={habits}/>
         </Route>
         <Route path = "*">
