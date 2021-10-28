@@ -16,7 +16,7 @@ function App() {
     .then(setHabits)
     .then(setChosen(habits.filter(habit => habit.chosen === true)))
    }, [])
-   //console.log(habits)
+
 
   function handleChosen(id) {
     fetch(`http://localhost:4000/habits/${id}`, {
