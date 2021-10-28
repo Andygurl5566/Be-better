@@ -2,17 +2,29 @@ import GlobalHeader from './GlobalHeader'
 import HabbitContainer from './HabbitContainer'
 import {Link} from "react-router-dom"
 import Form from './Form.js'
+import styled from "styled-components"
+import React, {useState} from 'react'
+
+
 function MainPage ({habits, handleChosen, chosen}) {
+    const [moreInfo, setMoreInfo] = useState(false)
+
+    function handleClick(){
+        //console.log(moreInfo) 
+        setMoreInfo(!moreInfo)
+    }
+
     function testing () {
         console.log(chosen)
     }
     return (
         <div>
             <GlobalHeader />
-            <Form />
+            <Styledh3>Dont see the habit you are looking for below? <button onClick = {handleClick}> Add it here! </button></Styledh3>
+            {moreInfo ? <Form /> : ""}
             <button onClick={testing}>test</button>
             <div className = "button-div">
-            <Link to ="/notes-page"> <button> Notes </button></Link>
+            <Link to ="/notes-page"> <button> View My Habits </button></Link>
             </div>
             <HabbitContainer handleChosen={handleChosen} habits = {habits}/>
         </div>
@@ -20,6 +32,11 @@ function MainPage ({habits, handleChosen, chosen}) {
 }
 
 export default MainPage
+
+const Styledh3 = styled.h3`
+text-align: center;
+`
+
 
 
 
