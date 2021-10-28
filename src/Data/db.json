@@ -3,7 +3,7 @@
     {
       "id": 1,
       "good": true,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Read more books",
       "notes": "I would like to start reading 1 book a month",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "good": true,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Wake Up Earlier",
       "notes": "I would like to wake up earlier in the morning",
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "good": true,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Get More Sleep",
       "notes": "I would like to get 8 hours of sleep a night",
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "good": true,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Learn an Instrument",
       "notes": "I would like to learn to play a musical instrument",
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "good": false,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Stop Eating Junk Food",
       "notes": "I would like to eat Heathier",
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "good": false,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Stop Biting Nails",
       "notes": "I would like to stop biting my nails.",
@@ -75,7 +75,7 @@
     {
       "id": 9,
       "good": false,
-      "chosen": true,
+      "chosen": false,
       "accomplished": false,
       "name": "Excessive Drinking",
       "notes": "I would like to cut back on my alcohol intake",
@@ -89,14 +89,6 @@
       "name": "Skipping Breakfast",
       "notes": "I would like to stop skipping meals",
       "image": "https://tse2.mm.bing.net/th?id=OIP.LBCU6avnYF2FzNzQ3w_xVwHaE6&pid=Api&P=0&w=244&h=163"
-    },
-    {
-      "chosen": true,
-      "accomplished": false,
-      "name": "Being Splendid",
-      "notes": "",
-      "image": "https://tse1.mm.bing.net/th?id=OIP.4tIlD-F1r7tKsE71ttOnbgHaFV&pid=Api&P=0&w=245&h=177",
-      "id": 11
     }
   ],
   "ExtraDataIfWeNeedIt": [
