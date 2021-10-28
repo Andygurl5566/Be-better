@@ -7,9 +7,9 @@ function NotesContainer ({chosen}) {
     console.log(chosen)
     return (
         <div className = 'notesContainer'>
-            {chosen === [] ? null : chosen.map(chosenHabit => <ChosenHabits chosenHabit={chosenHabit}/>)} 
+            {chosen === [] ? null : chosen.map(chosenHabit => <ChosenHabits key={chosen.id} chosenHabit={chosenHabit}/>)} 
             
-            <HabitNotes chosen={chosen}/>
+            <HabitNotes key={chosen.id} chosen={chosen}/>
         </div>
     )
 }
