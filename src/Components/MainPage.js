@@ -19,12 +19,12 @@ function MainPage ({habits, handleChosen, chosen, handleNewHabit}) {
     }
     return (
         <div>
-            <GlobalHeader />
-            <Styledh3>Dont see the habit you are looking for below? <button onClick = {handleClick}> Add it here! </button></Styledh3>
+            {/* <GlobalHeader /> */}
+            <Styledh3>Don't see the habit you are looking for below? <button onClick = {handleClick}> Add it here! </button></Styledh3>
             {moreInfo ? <Form  handleNewHabit={handleNewHabit}/> : ""}
             {/* <button onClick={testing}>test</button> */}
             <div className = "button-div">
-                <Link to ="/notes-page"> <button> View My Habits </button></Link>
+                <Link to ="/notes-page"> <button className="view"> View My Habits </button></Link>
             </div>
             <HabbitContainer handleChosen={handleChosen} habits = {habits}/>
         </div>
@@ -35,6 +35,36 @@ export default MainPage
 
 const Styledh3 = styled.h3`
 text-align: center;
+font-size:40px;
+
+.view{
+  font-size:30px;  
+}
+
+button{
+    display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:2em;
+ box-sizing: border-box;
+ text-decoration:none;
+font-size:20px;
+ 
+ font-weight:300;
+ color:#FFFFFF;
+ background-color:#576894;
+ text-align:center;
+ transition: all 0.2s;
+}
+button:hover{
+ background-color:#a2c495;
+}
+@media all and (max-width:30em){
+ a.button3{
+  display:block;
+  margin:0.2em auto;
+ }
+}
 `
 
 

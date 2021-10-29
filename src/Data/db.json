@@ -48,7 +48,7 @@
     {
       "id": 6,
       "good": false,
-      "chosen": false,
+      "chosen": true,
       "accomplished": false,
       "name": "Stop Eating Junk Food",
       "notes": "I would like to eat Heathier",

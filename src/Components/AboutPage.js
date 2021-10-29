@@ -9,7 +9,7 @@ function AboutPage(){
 
 let welcome = ` Welcome to Hobbit Habits where small habits can make a huge change!` 
 let welcome2= `Add a habit that you'd like to change by clicking 
-"Add Habit". To view more details about a habit, visit the notes tab.`
+"Add Habit". To view more details about a habit, select the 'View Habits' button.`
 
 const [moreInfo, setMoreInfo] = useState(false)
 

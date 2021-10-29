@@ -13,7 +13,7 @@ function NotesPage({chosen, patchNotes, handleUnChosen}){
 
     return (
     <div>
-        <GlobalHeader />
+        {/* <GlobalHeader /> */}
 
             <div className = "button-div">
                 <Link to ="/main-page"> 
