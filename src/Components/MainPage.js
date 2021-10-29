@@ -24,7 +24,7 @@ function MainPage ({habits, handleChosen, chosen, handleNewHabit}) {
             {moreInfo ? <Form  handleNewHabit={handleNewHabit}/> : ""}
             {/* <button onClick={testing}>test</button> */}
             <div className = "button-div">
-                <Link to ="/notes-page"> <button className="view"> View My Habits </button></Link>
+                <Link to ="/notes-page"> <Styledbtn className="view"> View My Habits </Styledbtn></Link>
             </div>
             <HabbitContainer handleChosen={handleChosen} habits = {habits}/>
         </div>
@@ -65,6 +65,31 @@ button:hover{
   margin:0.2em auto;
  }
 }
+`
+const Styledbtn = styled.button`
+display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:2em;
+ box-sizing: border-box;
+ text-decoration:none;
+font-size:20px;
+ 
+ font-weight:300;
+ color:#FFFFFF;
+ background-color:#576894;
+ text-align:center;
+ transition: all 0.2s;
+}
+button:hover{
+ background-color:#a2c495;
+}
+@media all and (max-width:30em){
+ a.button3{
+  display:block;
+  margin:0.2em auto;
+ }
+
 `
 
 

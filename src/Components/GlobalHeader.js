@@ -1,4 +1,5 @@
 import BadHabbits from "./BadHabbits";
+import styled from "styled-components"
 
 
 

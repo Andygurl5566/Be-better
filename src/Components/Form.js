@@ -61,12 +61,12 @@ function Form ({handleNewHabit}) {
                     <input onChange={handleBad} type='radio' id='bad' name='goodBad'></input>
                 </div>
 
-                <label htmlFor='image'> picture or emoji </label>
+                <label htmlFor='image'> Picture or Emoji </label>
                 <input onChange={handleImage} value={formObj.image} id='imageInput' type='text' name='imageInput' placeholder='image/emoji here'></input>
 
             </form>
             <div className="button-div">
-                <button onClick={testing}>testform</button>
+                <button onClick={testing}>ADD</button>
             </div>
         </Styleddiv>
     )
@@ -76,7 +76,19 @@ export default Form
 
 
 const Styleddiv = styled.div`
+font-size:25px;
+letter-spacing: .5px;
 text-align: center;
+padding-bottom:20px;
+
+input[type=text]{
+    padding:50px:
+    font-size:50px;
+    margin:20px 0;
+    border-radius:10px;
+    height: 30px;
+      
+}
 
 h3{  
 
@@ -84,6 +96,12 @@ h3{
 
 .button-div {
     padding-top: 20px;
+}
+
+button{
+    width:100px;
+    height:40px;
+    font-size:20px;
 }
 
 
