@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import image from "./img/icons8-thinking-64.png"
 
 
 function Habbit ({habit, handleChosen}) {
@@ -12,7 +13,9 @@ function Habbit ({habit, handleChosen}) {
         <Styledh3 className = "Habbit" >
             <h3>{habit.name}</h3>
             <img src ={habit.image} width = "300px" alt={habit.name}/>
-            <h1>📖</h1>
+            <div>
+            <img src={image} width = "0px"/>
+            </div>
             <button onClick = {test}> Add Habit </button>
         </Styledh3>
     )

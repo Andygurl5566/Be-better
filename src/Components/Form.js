@@ -30,7 +30,7 @@ function Form ({handleNewHabit}) {
     const handleBad = () => {
         let temp = {...formObj}
         temp.good = false
-        setFormObj(template)
+        setFormObj(temp)
     }
 
 
