@@ -70,4 +70,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-test
+## Features to Add
+
+GENERAL
+  Clean/ Refactor Code
+
+ INFO COMP
+ make the info component on About page more attractive
+ Read for typos or areas
+
+ FORM COMP
+ make placeholdertext larger
+
+
+HABIT COMP
+ ability to delete habit from the main page
+
+ Make notes disappear from main page when selected
+ OR 
+ Have text pop up that shows that selected habit has been added to notes page
+
+ Make Notes Visible Underneath Card on Notes page
+
+ Have a way to color code buttons whether good or bad
+
+ MAIN PAGE
+
+ Trophies or badges for motivation when you hit certain streaks
+
+ ABOUTPAGE
+
+Login and password
