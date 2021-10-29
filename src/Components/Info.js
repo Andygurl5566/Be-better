@@ -5,7 +5,7 @@ function Info(){
         <Styleddiv>
             <p>
                 Hobit Habit builds off of the concepts detailed in the book "Atomic Habits". 
-                 All habit result in a response. Positive responses are knowledge, relationships, productivity 
+                 All habits results in a response. Positive responses are knowledge, relationships, productivity 
                 and education. Negative responses are stress, negative self talk, etc. In order to increase positive
                 responses, use Hobit Habits to identify and keep track of habits you'd like to change.
             </p>
@@ -28,11 +28,15 @@ const Styleddiv = styled.div`
 
 background:#3a5aab3d;
 padding-bottom:10px;
+margin-top:20px;
+margin-bottom:20px;
+margin-left: 70px;
+Margin-right: 70px;
 
 p{
     display: inline-block;
     padding-right: 200px;
-    padding-left:200px
+    padding-left:200px;
     
 }
 
