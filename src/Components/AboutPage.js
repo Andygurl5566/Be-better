@@ -22,7 +22,7 @@ function handleClick(){
             <Styleddiv className="summary-container">
                 <div>
                     <h1> Hobbit Habits</h1>
-                    <h3> Small habits, large results </h3>
+                    <h3> SMALL HABITS, BIG RESULTS </h3>
                     <div className="img-div">
                         <img src= {image}/>
                     </div>
@@ -61,7 +61,7 @@ h1{
 }
 
 h3{
-    font-size:30px;
+    font-size:26px;
     line-height:10px;
     
 }
