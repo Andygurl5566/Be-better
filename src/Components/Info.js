@@ -26,10 +26,14 @@ export default Info
 
 const Styleddiv = styled.div`
 
+background:#3a5aab3d;
+padding-bottom:10px;
+
 p{
     display: inline-block;
     padding-right: 200px;
     padding-left:200px
+    
 }
 
 ul{
