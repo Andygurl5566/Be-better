@@ -2,6 +2,7 @@ import GlobalHeader from "./GlobalHeader"
 import {Link} from "react-router-dom"
 import NotesContainer from "./NotesContainer.js"
 import styled from "styled-components"
+import Logo from "./Logo"
 
 
 
@@ -15,7 +16,8 @@ function NotesPage({chosen, patchNotes, handleUnChosen}){
 
     return (
     <Styleddiv>
-        {/* <GlobalHeader /> */}
+        <GlobalHeader />
+        <Link to = "/"> <Logo/> </Link>
 
             <div className = "button-div">
                 <Link to ="/main-page"> 

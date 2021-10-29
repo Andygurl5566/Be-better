@@ -33,9 +33,10 @@ code {
   text-align: center;
   width: 100%;
   /*border: red solid 2px;*/
-  margin: 5px 0px;
-  background-color: #1f1f1f;
-  color: #5292b7
+ 
+  background:#c2e5ff;
+  color:#1f1f1f;
+  padding:10px
 
 }
 

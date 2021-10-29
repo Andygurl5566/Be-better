@@ -99,7 +99,6 @@ function App() {
   return (
    
     <>
-      <Link to = "/"> <Logo/> </Link>
       <Switch>
         <Route exact path = "/">
           <AboutPage />

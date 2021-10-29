@@ -3,6 +3,7 @@ import React, {useState} from "react"
 import Info from "./Info"
 import styled from "styled-components"
 import image from "./img/business-leader-2080772-1753761.png"
+import logo from "./img/icons8-mastercard-logo-150.png"
 
 
 function AboutPage(){
@@ -20,9 +21,13 @@ function handleClick(){
     return (
         
             <Styleddiv className="summary-container">
+                
                 <div>
+                    <div className ="top-border">
+                    </div>
                     <h1> Hobbit Habits</h1>
-                    <h3> SMALL HABITS, BIG RESULTS </h3>
+                    
+                    <h3> SMALL HABITS, BIG RESULTS <img src={logo} width ="30px"/></h3>
                     <div className="img-div">
                         <img src= {image}/>
                     </div>
@@ -46,6 +51,11 @@ export default AboutPage
 const Styleddiv = styled.div`
 
 background-image: url("Components/Images/business-leader-2080772-1753761.png") ;
+
+.top-border{
+    background:#c2e5ff;
+    padding:20px;
+}
 
 .img-div{
     padding-top:60px;
