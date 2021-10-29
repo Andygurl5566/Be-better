@@ -7,7 +7,7 @@ function ChosenHabits({chosenHabit, setDisplayHabit, handleUnChosen}){
    //attempting to add functionality to remove button here ------ 
     const [removeHabit, setRemove] = useState(false)
 
-    function handleRemove(){
+    const handleRemove=()=>{
         
         setRemove(!removeHabit)
         handleUnChosen(chosenHabit.id)
